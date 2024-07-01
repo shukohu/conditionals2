@@ -20,25 +20,21 @@ public class Main {
         System.out.println("Задача 2");
 
 
-        clientOs = 0;
+        int clientOS = 1;
         int clientDeviceYear = 2015;
-        if (clientOs == 1) {
-            if (clientDeviceYear < 2015) {
-                System.out.println("Установите облегченную версию приложения для Android по ссылке");
-            }else if (clientDeviceYear > 2015) {
-                System.out.println("Установите новую версию приложения для Android по ссылке");
-            }
-        }else if (clientOs == 0) {
-            if (clientDeviceYear < 2015) {
-                System.out.println("Установите облегченную версию приложения для IOS по ссылке");
-            }else if (clientDeviceYear > 2015) {
-                System.out.println("Установите новую версию приложения для IOS по ссылке");
-            }else{
-                System.out.println("На вашем устройстве последняя версия приложения");
-            }
+        if (clientOS == 0 && clientDeviceYear <= 2015) {
+            System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+        }else if (clientOS == 1 && clientDeviceYear > 2015) {
+            System.out.println("Установите новую версию приложения для Android по ссылке");
+        }else if (clientOS == 1 && clientDeviceYear < 2015) {
+            System.out.println("Установите облегченную версию приложения для Android по ссылке");
+        }else if (clientOS == 0 && clientDeviceYear > 2015) {
+            System.out.println("Установите новую версию приложения для iOS по ссылке");
+        }else{
+            System.out.println("На вашем устройстве последняя версия приложения");
         }
 
-
+        ///
 
         int clientDeviceYear1 = 2015;
         String msg = clientDeviceYear1 <= 2015 ? "облегченную " : "";
@@ -50,9 +46,9 @@ public class Main {
         }
 
 
+
         //Задача 3
         System.out.println("Задача 3");
-
 
         int year = 2021;
         if (year >=1584 && ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)) {
@@ -61,8 +57,10 @@ public class Main {
             System.out.println(year + " год не является високосным");
         }
 
+
         //Задача 4
         System.out.println("Задача 4");
+
 
 
         int deliveryDistance = 95;
@@ -75,6 +73,8 @@ public class Main {
         }else{
             System.out.println("Доставки нет");
         }
+
+
 
         //Задача 5
         System.out.println("Задача 5");
@@ -102,14 +102,12 @@ public class Main {
             case 11:
                 System.out.println("Осень");
                 break;
-            default:
-                System.out.println("Ошибка");
         }
 
 
-
-
-        }
 
     }
+}
+
+
 
